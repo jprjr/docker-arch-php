@@ -7,7 +7,7 @@ It's pre-configured to listen on port 9000.
 ## Usage
 
 This is really meant to be used for building new docker images with
-your PHP app. I'll write up a blog post on what I like to do.
+your PHP app. Here's a [blog post](https://jrjrtech.com/blog/2014/03/27/docker_fastcgi_pydio/) I wrote on using fastcgi and docker.
 
 It uses php-fpm as the entrypoint.
 
