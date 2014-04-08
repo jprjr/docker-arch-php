@@ -21,5 +21,11 @@ RUN sed -i 's/;extension=xcache.so/extension=xcache.so/g' /etc/php/conf.d/xcache
 RUN sed -i '/^listen/c \
 listen = 0.0.0.0:9000' /etc/php/php-fpm.conf
 
+RUN echo "<?php phpinfo(); ?>" > /srv/http/index.php
+
+RUN paccache -rk0
+RUN pacman -Scc --noconfirm
+
 EXPOSE 9000
+VOLUME /srv/http
 ENTRYPOINT ["php-fpm","-F"]
