@@ -15,6 +15,10 @@ RUN sed -i 's/;extension=mysql.so/extension=mysql.so/g' /etc/php/php.ini
 RUN sed -i 's/;extension=sqlite3.so/extension=sqlite3.so/g' /etc/php/php.ini
 RUN sed -i 's/;extension=pgsql.so/extension=pgsql.so/g' /etc/php/php.ini
 RUN sed -i 's/;extension=ldap.so/extension=ldap.so/g' /etc/php/php.ini
+RUN sed -i 's/;extension=openssl.so/extension=openssl.so/g' /etc/php/php.ini
+RUN sed -i 's/;extension=pdo_pgsql.so/extension=pdo_pgsql.so/g' /etc/php/php.ini
+RUN sed -i 's/;extension=pdo_mysql.so/extension=pdo_mysql.so/g' /etc/php/php.ini
+RUN sed -i 's/;extension=pdo_sqlite.so/extension=pdo_sqlite.so/g' /etc/php/php.ini
 
 RUN sed -i 's/;extension=xcache.so/extension=xcache.so/g' /etc/php/conf.d/xcache.ini
 
