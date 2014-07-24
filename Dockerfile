@@ -30,6 +30,10 @@ RUN echo "<?php phpinfo(); ?>" > /srv/http/index.php
 RUN paccache -rk0
 RUN pacman -Scc --noconfirm
 
+RUN touch /var/log/php-fpm.log
+RUN chown -R http /var/log/php-fpm.log /run/php-fpm
+USER http
+
 EXPOSE 9000
 VOLUME /srv/http
 ENTRYPOINT ["php-fpm","-F"]
